@@ -10,7 +10,7 @@ class Student:
         print(self._marks)
         print(self.__fees)
 
-    def show_fees(self):      # ✅ inside class
+    def show_fees(self):      
         print(self.__fees)
 
 
@@ -20,4 +20,4 @@ obj.show_inside()
 print(obj.name)
 print(obj._marks)
 
-obj.show_fees()   # ✅ access private correctly
+obj.show_fees() 
