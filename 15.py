@@ -38,3 +38,5 @@ obj = BankAccount("Prateek" ,150000 )
 obj.show_details()
 obj.show_deposite(15000)
 obj.show_withdrwal(5000)
+
+
