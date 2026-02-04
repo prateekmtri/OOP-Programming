@@ -1,31 +1,38 @@
 class BankAccount:
-    def __init__(self , name , balance , deposite , withdrwal):
+    def __init__(self , name , balance):
         self.name = name
         self.balance = balance
-        self.deposite = deposite
-        self.withdraw = withdrwal
+            
         
+    def show_deposite(self , ammount):
+        self.deposite_ammount = ammount
+        self.balance = self.balance+self.deposite_ammount
+        print(f"Deposite : {self.deposite_ammount}")
+        print(f"New balance : {self.balance}")
+            
+        
+    def  show_withdrwal(self , ammount):
+        self.withdrawl = ammount
+        self.balance = self.balance - self.withdrawl
+        
+        if self.withdrawl < self.balance:
+            print(f"withdrwal: {self.withdrawl}")
+        else:
+            print("Insufficient balance")
+            
+                
+            
     def show_details(self):
         print(f"Name : {self.name}")
-        print(f"Balance: {self.balance}")    
+        print(f"Balance: {self.balance}")
         
-    def show_deposite(self):
-        print(f"deposite : {self.deposite}")
-        print(f"New Balance : {self.balance + self.deposite}")
-        
-        if self.balance > 10000:
-            print("healthy account")
+        if self.balance >=10000:
+            print("Account is healthy")
         else:
-            print("Account is not healthy")    
-        
-    def  show_withdrwal(self):
-        print(f"Withdrawl : {self.withdraw}")
-        
-        if self.withdraw > self.balance:
-            print("Insufficient ")
+            print("Low Balance")            
             
 
-obj = BankAccount("Prateek" ,150000 , 5000 , 200000 )
+obj = BankAccount("Prateek" ,150000 )
 obj.show_details()
-obj.show_deposite()
-obj.show_withdrwal()
+obj.show_deposite(15000)
+obj.show_withdrwal(200000)
