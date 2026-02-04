@@ -13,10 +13,12 @@ class BankAccount:
         
     def  show_withdrwal(self , ammount):
         self.withdrawl = ammount
-        self.balance = self.balance - self.withdrawl
+       
         
-        if self.withdrawl < self.balance:
-            print(f"withdrwal: {self.withdrawl}")
+        if self.withdrawl <= self.balance:
+             self.balance = self.balance - self.withdrawl
+             print(f"withdrwal: {self.withdrawl}")
+             print(f"Remaining Balance: {self.balance}")
         else:
             print("Insufficient balance")
             
@@ -35,4 +37,4 @@ class BankAccount:
 obj = BankAccount("Prateek" ,150000 )
 obj.show_details()
 obj.show_deposite(15000)
-obj.show_withdrwal(200000)
+obj.show_withdrwal(5000)
