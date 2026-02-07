@@ -29,14 +29,3 @@ w.turn_on()
 r.info()
 r.turn_on()
 
-
-
-
-w = WashingMachine()
-r = Refrigerator()
-
-w.info()
-w.turn_on()
-
-r.info()
-r.turn_on()
