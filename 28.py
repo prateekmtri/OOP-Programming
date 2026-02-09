@@ -58,6 +58,15 @@ class Library:
                     if m.member_id == member_id:
                         b.issue_book()
                         m.book_taken.append(b.book_title)
+                        
+    def return_book(self, book_id, member_id):
+         for b in self.book:
+            if b.book_id == book_id:
+                for m in self.member:
+                    if m.member_id == member_id:
+                        b.return_book()
+                        if b.book_title in m.book_taken:
+                            m.book_taken.remove(b.book_title)                    
                             
             
         
