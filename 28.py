@@ -23,6 +23,7 @@ class Book:
             print(f"Book Return")
         else:
             print("This book was not issued")
+            
 
 class Member:
     def __init__(self , member_id , name ):
@@ -34,5 +35,21 @@ class Member:
         print(f"Member id : {self.member_id}")
         print(f"Member name : {self.name}")
         print(f"Book Taken : {self.book_taken}")
+
+class Library:
+    def __init__(self):
+        self.book = []
+        self.member = []
+        
+    def add_book(self, book_object):
+        self.book.append(book_object)
+        print("Book added to library")
+
+    def add_member(self, member_object):
+        self.member.append(member_object)
+        print("Member added to library")
             
+        
+        
+                
                     
