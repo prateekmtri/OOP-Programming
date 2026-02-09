@@ -23,3 +23,16 @@ class Book:
             print(f"Book Return")
         else:
             print("This book was not issued")
+
+class Member:
+    def __init__(self , member_id , name ):
+        self.member_id = member_id 
+        self.name = name
+        self.book_taken = []
+        
+    def show_member_info(self):
+        print(f"Member id : {self.member_id}")
+        print(f"Member name : {self.name}")
+        print(f"Book Taken : {self.book_taken}")
+            
+                    
