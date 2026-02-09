@@ -48,6 +48,17 @@ class Library:
     def add_member(self, member_object):
         self.member.append(member_object)
         print("Member added to library")
+        
+        
+        
+    def issue_book(self, book_id, member_id):
+        for b in self.book:
+            if b.book_id == book_id:
+                for m in self.member:
+                    if m.member_id == member_id:
+                        b.issue_book()
+                        m.book_taken.append(b.book_title)
+                            
             
         
         
