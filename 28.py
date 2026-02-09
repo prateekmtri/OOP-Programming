@@ -66,7 +66,38 @@ class Library:
                     if m.member_id == member_id:
                         b.return_book()
                         if b.book_title in m.book_taken:
-                            m.book_taken.remove(b.book_title)                    
+                            m.book_taken.remove(b.book_title) 
+                            
+                            
+                            
+ # Create books
+b1 = Book(101, "Python", "ABC")
+b2 = Book(102, "OOPS", "XYZ")
+
+# Create member
+m1 = Member(1, "Prateek")
+
+# Create library
+lib = Library()
+
+# Add to library
+lib.add_book(b1)
+lib.add_book(b2)
+lib.add_member(m1)
+
+print("\n--- Issue Book ---")
+lib.issue_book(101, 1)
+
+print("\n--- Member Info ---")
+m1.show_member_info()
+
+print("\n--- Return Book ---")
+lib.return_book(101, 1)
+
+print("\n--- Member Info ---")
+m1.show_member_info()
+                           
+                                               
                             
             
         
