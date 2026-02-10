@@ -55,5 +55,20 @@ class Hospital:
                 for p in self.patience:
                     if p.patient_id == patient_id:
                         d.assign_patient()
-                        p.doctor_assigned.append(d.name)            
+                        p.doctor_assigned.append(d.name)
+                        print("Doctor assigned successfully")
+                        return
+        print("Doctor or Patient not found")
+        
+    def complete_checkup(self, doctor_id, patient_id):
+         for d in self.doctor:
+            if d.doctor_id == doctor_id:
+                for p in self.patient:
+                    if p.patient_id == patient_id:
+                        d.complete_checkup()
+                        if d.name in p.doctor_assigned:
+                            p.doctor_assigned.remove(d.name)
+                        print("Checkup completed")
+                        return
+         print("Doctor or Patient not found")                 
                                     
