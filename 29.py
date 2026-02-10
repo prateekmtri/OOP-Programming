@@ -23,4 +23,18 @@ class Doctor:
             self.__is_available = True
             print("checkup is complete")
         else:
-            print("Busy")                      
+            print("Busy")
+        
+        
+class Patient:
+    def __init__(self , patient_id , name ):
+        self.patient_id = patient_id
+        self.name =  name
+        self.doctor_assigned = []
+        
+    def show_patient_info(self):
+        print(f"Patient id : {self.patient_id}")
+        print(f"Patient Name : {self.name}")
+        print(f"Doctor Assigned to patience : {self.doctor_assigned}")    
+                
+                                    
