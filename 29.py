@@ -63,12 +63,34 @@ class Hospital:
     def complete_checkup(self, doctor_id, patient_id):
          for d in self.doctor:
             if d.doctor_id == doctor_id:
-                for p in self.patient:
+                for p in self.patience:
                     if p.patient_id == patient_id:
                         d.complete_checkup()
                         if d.name in p.doctor_assigned:
                             p.doctor_assigned.remove(d.name)
                         print("Checkup completed")
                         return
-         print("Doctor or Patient not found")                 
+         print("Doctor or Patient not found")
+         
+         
+         
+
+
+d1 = Doctor(1, "Dr. Sharma", "Cardiology")
+p1 = Patient(101, "Ravi")
+
+h = Hospital()
+h.add_doctor(d1)
+h.add_patient(p1)
+
+h.assign_doctor(1, 101)
+
+p1.show_patient_info()
+d1.show_doctor()
+
+h.complete_checkup(1, 101)
+
+p1.show_patient_info()
+d1.show_doctor()         
+                          
                                     
