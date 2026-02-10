@@ -35,6 +35,25 @@ class Patient:
     def show_patient_info(self):
         print(f"Patient id : {self.patient_id}")
         print(f"Patient Name : {self.name}")
-        print(f"Doctor Assigned to patience : {self.doctor_assigned}")    
-                
+        print(f"Doctor Assigned to patience : {self.doctor_assigned}")
+        
+        
+class Hospital:
+    def __init__(self):
+        self.doctor = []
+        self.patience = []
+        
+    def add_doctor(self , doctor_object):
+        self.doctor.append(doctor_object)
+    
+    def add_patient(self, patient_object):
+        self.patience.append(patient_object)                  
+    
+    def assign_doctor(self , doctor_id , patient_id):
+        for d in self.doctor:
+            if d.doctor_id == doctor_id:
+                for p in self.patience:
+                    if p.patient_id == patient_id:
+                        d.assign_patient()
+                        p.doctor_assigned.append(d.name)            
                                     
