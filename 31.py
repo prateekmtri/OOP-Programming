@@ -2,12 +2,7 @@ class Fan:
     def __init__(self , brand):
         self.brand = brand
         self.__is_on = False
-        
-    def show_status(self):
-        if self.__is_on == False:
-            print("Fan is off")
-        else:
-            print("fan is on")    
+        self.__speed = 0    
             
             
     def turn_on(self):
@@ -22,6 +17,34 @@ class Fan:
             self.__is_on=False
             print(f"fan is off")
         else:
-            print("fan is alredy off")    
+            print("fan is alredy off")
                 
+    def increase_speed(self, amount):
+        if self.__is_on:
+            self.__speed += amount
+            if self.__speed > 5:
+                self.__speed = 5
+                print("Maximum speed reached")
+            else:
+                print(f"Speed increased to {self.__speed}")
+        else:
+            print("Fan is OFF")
+            
+    def decrese_speed(self , amount):
+        if self.__is_on:
+            self.__speed -= amount
+            if self.__speed < 0:
+                self.__speed = 0
+                print("Minimum speed reached")
+            else:
+                print(f"Speed decrese to {self.__speed}")
+        else:
+            print("Fan is off")            
+    
+    def show_status(self):
+        print(f"Brand : {self.brand}")
+        print(f"Status : {self.__is_on}")
+        print(f"Current Speed : {self.__speed}" )                        
+            
+                    
                     
