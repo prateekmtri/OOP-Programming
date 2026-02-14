@@ -47,4 +47,9 @@ class Fan:
         print(f"Current Speed : {self.__speed}" )                        
             
                     
-                    
+obj = Fan("Usha")
+obj.turn_on()
+obj.increase_speed(3)
+obj.show_status()
+obj.decrese_speed(1)
+obj.show_status()                    
