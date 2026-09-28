@@ -37,6 +37,3 @@ print("Brand : " , obj2.brand)
 print("Vehical Number : " , obj2.get_vehical())
 print("Rent : " , obj2.rent)
 obj2.vehicle_type()
-
-            
-                
