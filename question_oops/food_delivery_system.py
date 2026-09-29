@@ -39,4 +39,7 @@ print(obj2.customer_id)
 print(obj2.get_id())
 obj2.show_Amount()
 obj2.delivery_type() 
+
+
+
                    
