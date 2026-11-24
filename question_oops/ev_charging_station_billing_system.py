@@ -56,4 +56,5 @@ obj1.show_charging_details()
 print()
 obj2.show_charging_details()
 print()
-obj3.show_charging_details()        
+obj3.show_charging_details()    
+    
